@@ -132,7 +132,7 @@ func (d *DuoClient) ChallengeU2f(verificationHost string) (err error) {
 		return
 	}
 
-	log.Debug("status %s", status.Response.StatusCode)
+	log.Debugf("status %s", status.Response.StatusCode)
 	if status.Response.StatusCode == "u2f_sent" {
 		var response *u2fhost.AuthenticateResponse
 		allDevices := u2fhost.Devices()
