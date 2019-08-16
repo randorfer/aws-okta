@@ -7,7 +7,6 @@ require (
 	github.com/marshallbrekka/go-u2fhost v0.0.0-20170128051651-72b0e7a3f583
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/segmentio/analytics-go v3.0.1+incompatible
-	github.com/randorfer/aws-okta v0.22.1
 	github.com/sirupsen/logrus v1.4.1
 	github.com/skratchdot/open-golang v0.0.0-20160302144031-75fb7ed4208c
 	github.com/spf13/cobra v0.0.0-20170621173259-31694f19adee
