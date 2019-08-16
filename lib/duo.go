@@ -61,7 +61,7 @@ func NewDuoClient(host, signature, callback string) *DuoClient {
 	return &DuoClient{
 		Host:      host,
 		Signature: signature,
-		Device:    "phone1",
+		Device:    "u2f",
 		Callback:  callback,
 	}
 }
