@@ -451,7 +451,7 @@ func (d *DuoClient) DoStatus(txid, sid string) (auth string, status StatusResp, 
 		return
 	}
 	defer res.Body.Close()
-
+	log.Printf("%+v\n", res)
 	if res.StatusCode != http.StatusOK {
 		err = fmt.Errorf("Prompt request failed: %d", res.StatusCode)
 		return
