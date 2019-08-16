@@ -376,6 +376,8 @@ func (d *DuoClient) DoPrompt(sid string) (txid string, err error) {
 
 	client := &http.Client{}
 
+	log.Printf("device %+v", d)
+
 	// Pick between device you want to use -- the flow are bit different depending on
 	// whether you want to use a token or a phone of some sort
 	// it may make sense to make a selector in CLI similar to the Okta UI but
