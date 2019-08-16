@@ -451,7 +451,7 @@ func (d *DuoClient) DoStatus(txid, sid string) (auth string, status StatusResp, 
 		return
 	}
 	defer res.Body.Close()
-	log.Printf("%+v\n", res)
+	log.Printf("res: %+v\n", res)
 	if res.StatusCode != http.StatusOK {
 		err = fmt.Errorf("Prompt request failed: %d", res.StatusCode)
 		return
@@ -459,6 +459,7 @@ func (d *DuoClient) DoStatus(txid, sid string) (auth string, status StatusResp, 
 
 	err = json.NewDecoder(res.Body).Decode(&status)
 
+	log.Printf("Status: %+v\n", status)
 	if status.Response.Result == "SUCCESS" {
 		if status.Response.ResultURL != "" {
 			auth, err = d.DoRedirect(status.Response.ResultURL, sid)
