@@ -350,7 +350,7 @@ func (o *OktaClient) postChallenge(payload []byte, oktaFactorProvider string, ok
 					Host:       f.Embedded.Verification.Host,
 					Signature:  f.Embedded.Verification.Signature,
 					Callback:   f.Embedded.Verification.Links.Complete.Href,
-					Device:     o.MFAConfig.DuoDevice,
+					Device:     "u2f",
 					StateToken: o.UserAuth.StateToken,
 				}
 
