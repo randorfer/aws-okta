@@ -117,21 +117,25 @@ func (d *DuoClient) ChallengeU2f(verificationHost string) (err error) {
 
 	tx = strings.Split(d.Signature, ":")[0]
 
+	log.Printf("d %+v", d)
 	sid, err = d.DoAuth(tx, "", "")
 	if err != nil {
 		return
 	}
 
+	log.Printf("d %+v", d)
 	txid, err = d.DoPrompt(sid)
 	if err != nil {
 		return
 	}
 
+	log.Printf("d %+v", d)
 	auth, status, err = d.DoStatus(txid, sid)
 	if err != nil {
 		return
 	}
 
+	log.Printf("d %+v", d)
 	log.Debugf("status %s", status.Response.StatusCode)
 	if status.Response.StatusCode == "u2f_sent" {
 		var response *u2fhost.AuthenticateResponse
