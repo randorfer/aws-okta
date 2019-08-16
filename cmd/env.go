@@ -8,7 +8,7 @@ import (
 	"github.com/99designs/keyring"
 	"github.com/alessio/shellescape"
 	analytics "github.com/segmentio/analytics-go"
-	"github.com/segmentio/aws-okta/lib"
+	"github.com/randorfer/aws-okta/lib"
 	"github.com/spf13/cobra"
 )
 

@@ -3,7 +3,7 @@ jobs:
   test:
     docker:
       - image: circleci/golang:1.12
-    working_directory: /go/src/github.com/segmentio/aws-okta
+    working_directory: /go/src/github.com/randorfer/aws-okta
     steps:
       - checkout
       - run:
@@ -31,7 +31,7 @@ jobs:
   dist-linux:
     docker:
       - image: circleci/golang:1.12
-    working_directory: /go/src/github.com/segmentio/aws-okta
+    working_directory: /go/src/github.com/randorfer/aws-okta
     steps:
       - checkout
       - run:
@@ -54,7 +54,7 @@ jobs:
   publish-packagecloud:
     docker:
       - image: circleci/golang:1.12
-    working_directory: /go/src/github.com/segmentio/aws-okta
+    working_directory: /go/src/github.com/randorfer/aws-okta
     steps:
       - checkout
       - attach_workspace: { at: . }
@@ -72,7 +72,7 @@ jobs:
   publish-github-linux:
     docker:
       - image: circleci/golang:1.12
-    working_directory: /go/src/github.com/segmentio/aws-okta
+    working_directory: /go/src/github.com/randorfer/aws-okta
     steps:
       - checkout
       - attach_workspace: { at: . }
@@ -86,7 +86,7 @@ workflows:
   version: 2
   # currently we only build/publish for linux: macOS builds require non-FOSS
   # Keychain libs that require a macOS host to build on
-  # https://github.com/segmentio/aws-okta/issues/81
+  # https://github.com/randorfer/aws-okta/issues/81
   test-dist-publish-linux:
     jobs:
       - test

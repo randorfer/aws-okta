@@ -7,10 +7,10 @@
 If you have a functional go environment, you can install with:
 
 ```bash
-$ go get github.com/segmentio/aws-okta
+$ go get github.com/randorfer/aws-okta
 ```
 
-[See the wiki for more installation options like Linux packages and precompiled binaries.](https://github.com/segmentio/aws-okta/wiki/Installation)
+[See the wiki for more installation options like Linux packages and precompiled binaries.](https://github.com/randorfer/aws-okta/wiki/Installation)
 
 ### MacOS
 
@@ -168,7 +168,7 @@ This flag enables a new secure session cache that stores all sessions in the sam
 
 No provision is made to migrate sessions between session caches.
 
-Implemented in [https://github.com/segmentio/aws-okta/issues/146](#146).
+Implemented in [https://github.com/randorfer/aws-okta/issues/146](#146).
 
 ## Local Development
 
