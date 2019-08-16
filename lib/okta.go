@@ -341,6 +341,8 @@ func (o *OktaClient) postChallenge(payload []byte, oktaFactorProvider string, ok
 		f := o.UserAuth.Embedded.Factor
 		errChan := make(chan error, 1)
 
+		log.Printf("o: %+v", o)
+
 		if oktaFactorProvider == "DUO" {
 			// Contact the Duo to initiate Push notification
 			if f.Embedded.Verification.Host != "" {
